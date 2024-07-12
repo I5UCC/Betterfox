@@ -260,6 +260,10 @@ user_pref("gfx.canvas.accelerated", true);
 // PREF: enable container tabs
 user_pref("privacy.userContext.enabled", true);
 
+// PREF: enable NVIDIA RTX Super Resolution
+user_pref("gfx.webrender.overlay-vp-super-resolution", true);
+user_pref("gfx.webrender.overlay-vp-auto-hdr", true);
+
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
