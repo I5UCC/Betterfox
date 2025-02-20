@@ -223,12 +223,10 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
-// PREF: disable login manager
-user_pref("signon.rememberSignons", false);
-
-// PREF: disable address and credit card manager
-user_pref("extensions.formautofill.addresses.enabled", false);
-user_pref("extensions.formautofill.creditCards.enabled", false);
+// PREF: improve font rendering by using DirectWrite everywhere like Chrome [WINDOWS]
+user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
+user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
+user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
 
 // PREF: enable HTTPS-Only Mode
 // Warn me before loading sites that don't support HTTPS
