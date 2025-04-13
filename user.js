@@ -221,10 +221,35 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
+// PREF: make Strict ETP less aggressive
+user_pref("browser.contentblocking.features.strict", "tp,tpPrivate,cookieBehavior5,cookieBehaviorPBM5,cm,fp,stp,emailTP,emailTPPrivate,-lvl2,rp,rpTop,ocsp,qps,qpsPBM,fpp,fppPrivate,3pcd,btp");
+
 // PREF: improve font rendering by using DirectWrite everywhere like Chrome [WINDOWS]
 user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
 user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
 user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
+
+// PREF: allow websites to ask you for your location
+user_pref("permissions.default.geo", 0);
+
+// PREF: restore search engine suggestions
+user_pref("browser.search.suggest.enabled", true);
+
+// PREF: disable unified search button
+user_pref("browser.urlbar.scotchBonnet.enableOverride", false);
+
+// PREF: disable Firefox Sync
+user_pref("identity.fxaccounts.enabled", false);
+
+// PREF: disable the Firefox View tour from popping up
+user_pref("browser.firefox-view.feature-tour", "{\"screen\":\"\",\"complete\":true}");
+
+// PREF: disable login manager
+user_pref("signon.rememberSignons", false);
+
+// PREF: disable address and credit card manager
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
 
 // PREF: enable HTTPS-Only Mode
 // Warn me before loading sites that don't support HTTPS
@@ -232,18 +257,12 @@ user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
 
-// PREF: disable disk cache
-user_pref("browser.cache.disk.enable", false);
-
 // PREF: enforce certificate pinning
 // [ERROR] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
 user_pref("security.cert_pinning.enforcement_level", 2);
 
 // PREF: enable GPU-accelerated Canvas2D [WINDOWS]
 user_pref("gfx.canvas.accelerated", true);
-
-// PREF: enable container tabs
-user_pref("privacy.userContext.enabled", true);
 
 // PREF: enable NVIDIA RTX Super Resolution
 user_pref("gfx.webrender.overlay-vp-super-resolution", true);
