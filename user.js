@@ -241,12 +241,6 @@ user_pref("signon.rememberSignons", false);
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 
-// PREF: enable HTTPS-Only Mode
-// Warn me before loading sites that don't support HTTPS
-// in both Normal and Private Browsing windows.
-user_pref("dom.security.https_only_mode", true);
-user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
-
 // PREF: enforce certificate pinning
 // [ERROR] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
 user_pref("security.cert_pinning.enforcement_level", 2);
